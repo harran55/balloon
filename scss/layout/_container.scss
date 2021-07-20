@@ -1,0 +1,27 @@
+.container,
+.container-fluid {
+    width: 100%;
+    margin: auto;
+    padding-right: var(--spacing);
+    padding-left: var(--spacing);
+
+    .first {
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1;
+    }
+    
+    .last {
+        -webkit-box-ordinal-group: 13;
+        -ms-flex-order: 12;
+        order: 12;
+    }
+}
+
+.container {
+    @each $name, $breakpoint in $breakpoints {
+        @media (min-width: $breakpoint) {
+            max-width: map-get($viewports, $name);
+        }
+    }
+}

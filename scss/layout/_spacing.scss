@@ -1,0 +1,22 @@
+
+@if $enable-spacing {
+    @each $size, $unit in $spacing-sizes {
+        .m-#{$size} {
+            margin: $unit;
+        }
+
+        .p-#{$size} {
+            padding: $unit;
+        }
+
+        @each $name, $position in $spacing-positions {
+            .m-#{$name}-#{$size} {
+                margin-#{$position}: $unit;
+            }
+
+            .p-#{$name}-#{$size} {
+                padding-#{$position}: $unit;
+            }
+        }
+    }
+}

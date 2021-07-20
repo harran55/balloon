@@ -1,0 +1,24 @@
+.spinner {
+    display: inline-block;
+    margin: var(--spinner-margin);
+    border: .25rem solid var(--spinner-border-color);
+    border-left: .25rem solid var(--spinner-border-left-color);
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    animation: spinnerDonut 1.2s linear infinite;
+
+    &.secondary {
+        --spinner-border-left-color: var(--spinner-secondary)
+    }
+}
+
+@keyframes spinnerDonut {
+    0% {
+        transform:rotate(0deg)
+    }
+
+    100% {
+        transform:rotate(360deg)
+    }
+}

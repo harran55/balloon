@@ -1,0 +1,162 @@
+b,
+strong {
+    font-weight: bolder;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: .75em;
+    line-height: 0;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -0.25em;
+}
+sup {
+    top: -0.5em;
+}
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl {
+    margin: 0;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin: 0;
+}
+
+address,
+blockquote,
+dl,
+figure,
+form,
+ol,
+p,
+pre,
+table,
+ul {
+    margin-top: 0;
+    margin-bottom: var(--typography-spacing-vertical);
+    color: var(--color);
+    font-size: 1rem;
+    font-style: normal;
+}
+
+a {
+    --color: var(--primary);
+    --background-color: transparent;
+    background-color: var(--background-color);
+    color: var(--color);
+    text-decoration: var(--text-decoration);
+    outline: none;
+    @if $enable-transitions {
+        transition:
+          background-color var(--transition),
+          color var(--transition),
+          text-decoration var(--transition),
+          box-shadow var(--transition);
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      --color: var(--primary-hover);
+      --text-decoration: underline;
+    }
+  
+    &:focus {
+      --background-color: var(--primary-focus);
+    }
+    
+    &[style="secondary"] {
+        --color: var(--secondary);
+
+        &:hover,
+        &:active {
+            --color: var(--secondary-hover);
+        }
+
+        &:focus {
+            --background-color: var(--secondary-focus);
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: var(--typography-spacing-vertical);
+    color: var(--color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+}
+
+h1 {
+    --color: var(--h1-color);
+}
+
+h2 {
+    --color: var(--h2-color);
+}
+
+h3 {
+    --color: var(--h3-color);
+}
+
+h4 {
+    --color: var(--h4-color);
+}
+
+h5 {
+    --color: var(--h5-color);
+}
+
+h6 {
+    --color: var(--h6-color);
+}
+
+p {
+    margin-bottom: var(--typography-spacing-vertical);
+}
+
+small {
+    font-size: var(--font-size);
+}
+
+ul,
+ol {
+    padding-left: var(--spacing);
+
+    li {
+        margin-bottom: calc(var(--typography-spacing-vertical) / 4);
+    }
+}
+
+mark {
+    padding: .125rem .25rem;
+    background-color: var(--mark-background-color);
+    color: var(--mark-color);
+    vertical-align: middle;
+}
+
+mark {
+    padding: .125rem .25rem;
+    background-color: var(--mark-background-color);
+    color: var(--mark-color);
+    vertical-align: middle;
+}
+
+::selection {
+    background-color: var(--primary-focus);
+}

@@ -1,0 +1,58 @@
+// Enable full grid system.
+$enable-full-grid: false !default;
+// NOTE: This var will be used on condition that `$enable-full-grid` enabled.
+$grid-columns: 12;
+
+// Enable transations.
+$enable-transitions: true !default;
+
+// Enable visibility.
+$enable-visibility: false !default;
+
+// Enable tooltips.
+$enable-tooltips: false !default;
+
+// Enable spinners.
+$enable-spinners: false !default;
+
+// Enable spacing.
+$enable-spacing: true !default;
+
+// Breakpoints
+$breakpoints: (
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+) !default;
+
+// Viewports
+$viewports: (
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+) !default;
+
+// Typography
+$typography: (
+    sm: 17px,
+    md: 18px,
+    lg: 19px,
+) !default;
+
+// Spacing sizes
+$spacing-sizes: (
+    0: 0rem,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 1rem,
+    4: 2rem,
+    5: 4rem,
+    6: 8rem,
+) !default;
+
+$spacing-positions: (
+    t: 'top',
+    r: 'right',
+    b: 'bottom',
+    l: 'left'
+) !default;

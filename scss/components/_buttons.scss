@@ -1,0 +1,55 @@
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--spacing);
+}
+
+a[role="button"] {
+    display: inline-block;
+    text-decoration: none;
+}
+
+button,
+input[type="submit"],
+input[type="button"]
+input[type="reset"],
+a[role="button"] {
+    padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    color: var(--color);
+    font-size: 1rem;
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    text-align: center;
+    cursor: pointer;
+    --background-color: var(--primary);
+    --border-color: var(--primary);
+    --color: var(--primary-inverse);
+    --box-shadow: var(--button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
+    @if $enable-transitions {
+        transition:
+            background-color var(--transition),
+            border-color var(--transition),
+            color var(--transition),
+            box-shadow var(--transition);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        --background-color: var(--primary-hover);
+        --border-color: var(--primary-hover);
+        --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
+    }
+
+    &:focus {
+        --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)), 0 0 0 var(--outline-width) var(--primary-focus);
+    }
+}
+
+
+

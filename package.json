@@ -1,0 +1,23 @@
+{
+  "name": "@ballooncss/balloon",
+  "version": "1.0.0",
+  "description": "Minimal CSS Framework in pure HTML",
+  "main": "css/balloon.min.css",
+  "author": "AbdallahMohammed",
+  "homepage": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ballooncss/balloon"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "scss-framework",
+    "minimal",
+    "lightweight"
+  ],
+  "bugs": {
+    "url": "https://github.com/ballooncss/balloon/issues"
+  }
+}

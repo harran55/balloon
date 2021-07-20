@@ -1,0 +1,18 @@
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"] {
+  background-image: var(--icon-date);
+  background-position: center right .75rem;
+  background-repeat: no-repeat;
+  background-size: 1rem auto;
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+}
+
+[type="time"] {
+  background-image: var(--icon-time);
+}

@@ -1,0 +1,75 @@
+@if $enable-tooltips {
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    
+        &:before,
+        &:after {
+            position: absolute;
+            opacity: 0;
+            clip: rect(0 0 0 0);
+            -webkit-clip-path: inset(100%);
+                clip-path: inset(100%);
+            left: 50%;
+            @if $enable-transitions {
+                transition: all var(--transition);
+            }
+        }
+    
+        &:hover,
+        &:focus {
+            &:before,
+            &:after {
+                opacity: 1;
+                clip: auto;
+                -webkit-clip-path: inset(0%);
+                        clip-path: inset(0%);
+            }
+        }
+    
+        &:before {
+            content: '';
+            background: transparent;
+            border: var(--tooltip-margin) solid transparent;
+            left: calc(50% - var(--tooltip-margin));
+        }
+    
+        &:after {
+            content: attr(aria-label);
+            color: var(--primary-inverse);
+            background: var(--primary);
+            border-radius: var(--border-radius);
+            padding: var(--spacing);
+            box-shadow: var(--button-box-shadow);
+            white-space: nowrap;
+            transform: translateX(-50%);
+        }
+    }
+    
+    .tooltip {
+        &:not(.bottom):before {
+            border-top-color: var(--primary);
+        }
+    
+        &.bottom:before {
+            border-bottom-color: var(--primary);
+        }
+    
+        &:not(.bottom):after {
+            margin-bottom: calc(2 * var(--tooltip-margin));
+        }
+        &.bottom:after {
+            margin-top: calc(2 * var(--tooltip-margin));
+        }
+    
+        &:not(.bottom):before,
+        &:not(.bottom):after {
+            bottom: 75%;
+        }
+    
+        &.bottom:before,
+        &.bottom:after {
+            top: 75%;
+        }
+    }
+}

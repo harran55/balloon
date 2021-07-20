@@ -1,0 +1,21 @@
+th,
+td {
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    border-bottom: var(--border-width) solid var(--table-border-color);
+    color: var(--color);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    text-align: left;
+}
+
+tr {
+    background-color: var(--background-color);
+}
+
+table {
+    &[role="grid"] {
+        tbody tr:nth-child(odd) {
+            --background-color: var(--table-row-stripped-background-color);
+        }
+    }
+}
