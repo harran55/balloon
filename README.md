@@ -9,7 +9,7 @@
 </p>
 
 ## BalloonCSS
-![CSS Gzipped](https://img.badgesize.io/ballooncss/balloon/master/css/balloon.css?compression=gzip&color=1095c1&label=CSS%20gzipped)
+![CSS Gzipped](https://img.badgesize.io/ballooncss/balloon/master/dist/balloon.css?compression=gzip&color=1095c1&label=CSS%20gzipped)
 [![Github release](https://img.shields.io/github/v/release/ballooncss/balloon?color=1095c1&logo=github&logoColor=white)](https://github.com/ballooncss/balloon/releases/latest)
 [![npm version](https://img.shields.io/npm/v/@ballooncss/balloon?color=1095c1)](https://www.npmjs.com/package/@ballooncss/balloon)
 [![License](https://img.shields.io/badge/license-MIT-%231095c1)](https://github.com/ballooncss/balloon/blob/master/LICENSE.md)
