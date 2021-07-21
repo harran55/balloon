@@ -3,5 +3,15 @@
         .shadow-#{$name} {
             box-shadow: $value;
         }
+
+        @if $enable-responsive-shadows {
+            @each $break, $breakpoint in $breakpoints {
+                @media (min-width: $breakpoint) {
+                    .shadow-#{$break}-#{$name} {
+                        box-shadow: $value;
+                    }
+                }
+            }
+        }
     }
 }

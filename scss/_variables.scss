@@ -21,11 +21,20 @@ $enable-spacing: false !default;
 // Enable shadows.
 $enable-shadows: false !default;
 
+// Enable cursors
+$enable-cursors: false !default;
+
 // Enable responsive typography.
 $enable-responsive-typography: true !default;
 
 // Enable responsive spacing.
-$enable-responsive-spacings: true !default;
+$enable-responsive-spacings: false !default;
+
+// Enable Responsive shadows.
+$enable-responsive-shadows: false !default;
+
+// Enable responsive cursors.
+$enable-responsive-cursors: false !default;
 
 // Breakpoints
 $breakpoints: (
@@ -65,4 +74,41 @@ $shadows: (
     lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
     inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
     none: 'none',
-)
+) !default;
+
+$cursors: (
+    auto: 'auto',
+    default: 'default',
+    none: 'none',
+    context: 'context-menu',
+    help: 'help',
+    progress: 'progress',
+    pointer: 'pointer',
+    wait: 'wait',
+    cell: 'cell',
+    crosshair: 'crosshair',
+    text: 'text',
+    vertical: 'vertical-text',
+    alias: 'alias',
+    copy: 'copy',
+    move: 'move',
+    no-drop: 'no-drop',
+    not-allowed: 'not-allowed',
+    e-resize: 'e-resize',
+    n-resize: 'n-resize',
+    ne-resize: 'ne-resize',
+    nw-resize: 'nw-resize',
+    s-resize: 's-resize',
+    se-resize: 'se-resize',
+    sw-resize: 'sw-resize',
+    w-resize: 'w-resize',
+    ew-resize: 'ew-resize',
+    ns-resize: 'ns-resize',
+    nesw-resize: 'nesw-resize',
+    nwse-resize: 'nwse-resize',
+    col-resize: 'col-resize',
+    row-resize: 'row-resize',
+    all-scroll: 'all-scroll',
+    zoom-in: 'zoom-in',
+    zoom-out: 'zoom-out',
+) !default;

@@ -9,35 +9,37 @@
             padding: $unit;
         }
 
-        @each $break, $breakpoint in $breakpoints {
-            @media (min-width: $breakpoint) {
-                .m-#{$break}-#{$size} {
-                    margin: $unit
-                }
-
-                .p-#{$break}-#{$size} {
-                    padding: $unit;
-                }
-            }
-        }
-
-        @each $name, $position in $spacing-positions {
-            .m-#{$name}-#{$size} {
-                margin-#{$position}: $unit;
-            }
-
-            .p-#{$name}-#{$size} {
-                padding-#{$position}: $unit;
-            }
-
+        @if $enable-responsive-spacings {
             @each $break, $breakpoint in $breakpoints {
                 @media (min-width: $breakpoint) {
-                    .m-#{$name}-#{$break}-#{$size} {
-                        margin-#{$position}: $unit
+                    .m-#{$break}-#{$size} {
+                        margin: $unit
                     }
-
-                    .p-#{$name}-#{$break}-#{$size} {
-                        padding-#{$position}: $unit;
+    
+                    .p-#{$break}-#{$size} {
+                        padding: $unit;
+                    }
+                }
+            }
+    
+            @each $name, $position in $spacing-positions {
+                .m-#{$name}-#{$size} {
+                    margin-#{$position}: $unit;
+                }
+    
+                .p-#{$name}-#{$size} {
+                    padding-#{$position}: $unit;
+                }
+    
+                @each $break, $breakpoint in $breakpoints {
+                    @media (min-width: $breakpoint) {
+                        .m-#{$name}-#{$break}-#{$size} {
+                            margin-#{$position}: $unit
+                        }
+    
+                        .p-#{$name}-#{$break}-#{$size} {
+                            padding-#{$position}: $unit;
+                        }
                     }
                 }
             }

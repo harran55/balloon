@@ -1,6 +1,6 @@
 {
   "name": "@ballooncss/balloon",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Minimal CSS Framework in pure HTML",
   "main": "dist/balloon.css",
   "author": "AbdallahMohammed",
