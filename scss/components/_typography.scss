@@ -160,3 +160,18 @@ mark {
 ::selection {
     background-color: var(--primary-focus);
 }
+
+hgroup {
+    margin-bottom: var(--typography-spacing-vertical);
+  
+    > * {
+      margin-bottom: 0;
+    }
+  
+    > *:last-child {
+      --color: var(--muted-color);
+      --font-weight: unset;
+      font-family: unset;
+      font-size: 1rem;
+    }
+  }

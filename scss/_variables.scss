@@ -7,16 +7,25 @@ $grid-columns: 12;
 $enable-transitions: true !default;
 
 // Enable visibility.
-$enable-visibility: false !default;
+$enable-visibility: true !default;
+
+// Enable spinners.
+$enable-spinners: true !default;
 
 // Enable tooltips.
 $enable-tooltips: false !default;
 
-// Enable spinners.
-$enable-spinners: false !default;
-
 // Enable spacing.
-$enable-spacing: true !default;
+$enable-spacing: false !default;
+
+// Enable shadows.
+$enable-shadows: false !default;
+
+// Enable responsive typography.
+$enable-responsive-typography: true !default;
+
+// Enable responsive spacing.
+$enable-responsive-spacings: true !default;
 
 // Breakpoints
 $breakpoints: (
@@ -30,13 +39,6 @@ $viewports: (
     sm: 640px,
     md: 768px,
     lg: 1024px,
-) !default;
-
-// Typography
-$typography: (
-    sm: 17px,
-    md: 18px,
-    lg: 19px,
 ) !default;
 
 // Spacing sizes
@@ -56,3 +58,11 @@ $spacing-positions: (
     b: 'bottom',
     l: 'left'
 ) !default;
+
+$shadows: (
+    sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+    md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+    lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+    inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+    none: 'none',
+)
