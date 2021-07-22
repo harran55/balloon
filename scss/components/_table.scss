@@ -13,6 +13,8 @@ tr {
 }
 
 table {
+    width: 100%;
+
     &[role="grid"] {
         tbody tr:nth-child(odd) {
             --background-color: var(--table-row-stripped-background-color);

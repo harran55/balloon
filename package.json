@@ -1,11 +1,14 @@
 {
   "name": "@ballooncss/balloon",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Minimal CSS Framework in pure HTML",
   "main": "dist/balloon.css",
   "author": "AbdallahMohammed",
   "homepage": "",
   "license": "MIT",
+  "scripts": {
+    "build": "sass scss/balloon.scss dist/balloon.css && sass scss/balloon.full.scss dist/balloon.full.css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ballooncss/balloon"

@@ -51,5 +51,60 @@ a[role="button"] {
     }
 }
 
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+a[role="button"] {
 
+    &.secondary {
+        --background-color: var(--secondary);
+        --border-color: var(--secondary);
+        --color: var(--secondary-inverse);
+        cursor: pointer;
 
+        &:hover,
+        &:active,
+        &:focus {
+            --background-color: var(--secondary-hover);
+            --border-color: var(--secondary-hover);
+        }
+
+        &:focus {
+            --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)), 0 0 0 var(--outline-width) var(--secondary-focus);
+        }
+    }
+
+    &.outline {
+        --background-color: transparent;
+        --color: var(--primary);
+  
+        &:hover,
+        &:active,
+        &:focus {
+            --background-color: transparent;
+            --color: var(--primary-hover);
+        }
+    }
+
+    &.outline.secondary {
+        --color: var(--secondary);
+  
+        &:hover,
+        &:active,
+        &:focus {
+            --color: var(--secondary-hover);
+        }
+    }  
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+a[role="button"] {
+    &[disabled] {
+        opacity: .5;
+        pointer-events: none;
+    }
+}

@@ -1,14 +1,14 @@
 @if $enable-cursors {
     @each $name, $value in $cursors {
         .cursor-#{$name} {
-            cursor: $value;
+            cursor: #{$value};
         }
 
         @if $enable-responsive-cursors {
             @each $break, $breakpoint in $breakpoints {
                 @media (min-width: $breakpoint) {
                     .cursor-#{$break}-#{$name} {
-                        cursor: $value;
+                        cursor: #{$value};
                     }
                 }
             }

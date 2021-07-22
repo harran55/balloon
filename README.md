@@ -6,6 +6,7 @@
   Elegant styles for all natives HTML elements without any many classes
   <br>
   <br>
+  <a href="https://ballooncss.netlify.app/docs">Documentation</a> - <a href="https://ballooncss.netlify.app/playground">Playground</a>
 </p>
 
 ## BalloonCSS

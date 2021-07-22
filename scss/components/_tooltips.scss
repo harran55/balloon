@@ -1,4 +1,7 @@
 @if $enable-tooltips {
+    // Config
+    $tooltip-spacing: var(--spacing);
+    
     .tooltip {
         position: relative;
         display: inline-block;
@@ -39,7 +42,7 @@
             color: var(--primary-inverse);
             background: var(--primary);
             border-radius: var(--border-radius);
-            padding: var(--spacing);
+            padding: $tooltip-spacing;
             box-shadow: var(--button-box-shadow);
             white-space: nowrap;
             transform: translateX(-50%);
