@@ -87,14 +87,16 @@ a {
     }
 
     &[target="_blank"] {
-        content: '';
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        background-image: var(--icon-external);
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: .66rem auto;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            background-image: var(--icon-external);
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: .66rem auto;
+        }
     }
 }
 
