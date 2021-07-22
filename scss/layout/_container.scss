@@ -19,9 +19,27 @@
 }
 
 .container {
-    @each $name, $breakpoint in $breakpoints {
-        @media (min-width: $breakpoint) {
-            max-width: map-get($viewports, $name);
+    @if map-get($breakpoints, 'sm') {
+        @media (min-width: map-get($breakpoints, 'sm')) {
+            max-width: map-get($viewports, 'sm');
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    @if map-get($breakpoints, 'md') {
+        @media (min-width: map-get($breakpoints, 'md')) {
+            max-width: map-get($viewports, 'md');
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    @if map-get($breakpoints, 'lg') {
+        @media (min-width: map-get($breakpoints, 'lg')) {
+            max-width: map-get($viewports, 'lg');
+            padding-right: 0;
+            padding-left: 0;
         }
     }
 }
